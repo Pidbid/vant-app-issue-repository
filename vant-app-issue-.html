@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.9/lib/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <van-tabs>
+            <van-tab title="1">
+                <div id="test"></div>
+            </vant-tab>
+            <van-tab title="2">
+                <div ref="test"></div>
+            </vant-tab>
+        </van-tabs>
+    </div>
+
+    <!-- 引入Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <!-- 引入NutUI组件库 -->
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.9/lib/vant.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+
+                }
+            },
+            mounted() {
+                console.log(document.getElementById("test"))
+                console.log(this.$refs.test)
+            }
+        })
+    </script>
+</body>
+
+</html>
